@@ -17,4 +17,4 @@ The model code is in the folder **recomodels**
 The presentation file is `presentation-azuredev.pptx`   
 
 # Youtube video 
-A 3 minute video can be found in (Recommendation Engine deployed in ACI and AKS)[https://www.youtube.com/watch?v=Y154aR7mCbk]  
+A 3 minute video can be found in [Recommendation Engine deployed in ACI and AKS](https://www.youtube.com/watch?v=Y154aR7mCbk)  
