@@ -1,6 +1,8 @@
 # Install Azure CLI
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
+sudo chmod 666 /var/run/docker.sock
+
 # Build the docker image        
 docker build -t reco .   
 
