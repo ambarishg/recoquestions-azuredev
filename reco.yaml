@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recodeploy
+  labels:
+    app: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: recoimage
+          image: recoacr.azurecr.io/reco:v1
+          resources:
+            limits:
+              memory: "5Gi"
+            requests:
+              memory: "4Gi"
+          ports:
+            - containerPort: 8501
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: reco-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8501
+  selector:
+    app: web
